@@ -21,7 +21,7 @@ def push(text):
 
 
 def record_user_details(email, name="Name not provided", notes="not provided"):
-    push(f"Recording {name} with email {email} and notes {notes}")
+    push(f"Taking {name} with email {email} and notes {notes}")
     return {"recorded": "ok"}
 
 def record_unknown_question(question):
@@ -30,13 +30,13 @@ def record_unknown_question(question):
 
 record_user_details_json = {
     "name": "record_user_details",
-    "description": "Use this tool to record that a user is interested in being in touch and provided an email address",
+    "description": "Use this tool to record that a user is interested in being in touch",
     "parameters": {
         "type": "object",
         "properties": {
             "email": {
                 "type": "string",
-                "description": "The email address of this user"
+                "description": "The email address of this user "
             },
             "name": {
                 "type": "string",
@@ -77,7 +77,7 @@ class Me:
 
     def __init__(self):
         self.openai = OpenAI()
-        self.name = "Ed Donner"
+        self.name = "Ben, Binh Nguyen"
         reader = PdfReader("me/linkedin.pdf")
         self.linkedin = ""
         for page in reader.pages:
