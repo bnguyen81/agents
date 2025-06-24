@@ -24,6 +24,10 @@ def record_user_details(email, name="Name not provided", notes="not provided"):
     push(f"Taking {name} with email {email} and notes {notes}")
     return {"recorded": "ok"}
 
+def record_user_job(job, name="Name not provided", notes="not provided"):
+    push(f"Taking {name} with job {job} and notes {notes}")
+    return {"recorded": "ok"}
+
 def record_unknown_question(question):
     push(f"Recording {question}")
     return {"recorded": "ok"}
